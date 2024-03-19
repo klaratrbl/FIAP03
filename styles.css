@@ -1,0 +1,252 @@
+/* Reset de estilos para garantir consistência entre os navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão para o corpo do documento */
+    line-height: 1.6; /* Define a altura da linha */
+    transition: background-color 0.4s ease; /* Transição suave para alterações de cor de fundo */
+}
+
+/* Estilos do cabeçalho */
+header {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 60px; /* Altura do cabeçalho */
+    background-color: #141414; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+}
+
+/* Estilos da navegação */
+nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remova o preenchimento */
+    text-align: center; /* Centraliza os itens da lista */
+    margin-top: 20px; /* Adiciona margem superior */
+}
+
+nav ul li {
+    display: inline-block; /* Exibe os itens da lista em linha */
+    margin-right: 20px; /* Margem direita */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove a margem direita do último item */
+}
+
+nav ul li a {
+    color: #000; /* Cor do texto do link no tema claro */
+    text-decoration: none; /* Remove a decoração do link */
+    position: relative; /* Necessário para o efeito de transição */
+    transition: color 0.3s ease; /* Efeito de transição de cor */
+    font-weight: bold; /* Texto em negrito */
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 10px 20px; /* Adiciona preenchimento */
+    border: 2px solid #000; /* Adiciona uma borda */
+    border-radius: 5px; /* Borda arredondada */
+}
+
+nav ul li a:hover {
+    color: #f0f0f0; /* Altera a cor do texto ao passar o mouse */
+    background-color: #000; /* Altera a cor de fundo ao passar o mouse */
+}
+
+/* Estilos do conteúdo principal */
+main {
+    padding: 20px; /* Espaçamento interno */
+}
+
+section {
+    margin-bottom: 30px; /* Margem inferior */
+}
+
+article {
+    background-color: #f9f9f9; /* Cor de fundo */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+article img {
+    max-width: 100%; /* Largura máxima */
+    height: auto; /* Altura automática */
+    margin-bottom: 10px; /* Margem inferior */
+    max-height: 200px; /* Definindo uma altura máxima para a imagem */
+    object-fit: cover; /* Redimensiona a imagem mantendo a proporção */
+}
+
+/* Estilos do rodapé */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #141414; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Alinhamento do texto */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Estilo do botão de alternância */
+.switch-container {
+    position: absolute; /* Posição absoluta para posicionar o botão */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+}
+
+.switch {
+    display: none; /* Oculta o botão de alternância */
+}
+
+.switch + .switch-label {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #000; /* Cor de fundo padrão do botão */
+    border-radius: 10px;
+    cursor: pointer; /* Cursor ao passar por cima */
+}
+
+.switch + .switch-label:before,
+.switch + .switch-label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    transition: all 0.3s ease; /* Transição suave para mudanças */
+}
+
+.switch + .switch-label:before {
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: #141414; /* Cor do círculo quando desligado */
+    border-radius: 50%;
+}
+
+.switch + .switch-label:after {
+    right: 2px; /* Ajuste para a bolinha ficar do lado direito */
+    width: 16px;
+    height: 16px;
+    background-color: #fff; /* Cor do círculo quando ligado */
+    border-radius: 50%;
+}
+
+.switch:checked + .switch-label:before {
+    transform: translateX(20px); /* Movimento do círculo quando ligado */
+}
+
+.switch:checked + .switch-label:after {
+    transform: translateX(-20px); /* Movimento do círculo quando ligado */
+}
+
+/* Estilos específicos para o modo escuro */
+.tema-escuro {
+    background-color: #080808; /* Cor de fundo no tema escuro */
+}
+
+.tema-escuro nav ul li a {
+    color: #fff; /* Cor do texto do link no tema escuro */
+}
+
+.tema-escuro nav ul li a {
+    color: #fff; /* Cor do texto do link no tema escuro */
+    border-color: #fff; /* Cor da borda no tema escuro */
+}
+
+.tema-escuro nav ul li a:hover {
+    color: #f0f0f0; /* Altera a cor do texto ao passar o mouse no tema escuro */
+    background-color: #fff; /* Altera a cor de fundo ao passar o mouse no tema escuro */
+}
+
+/* Estilo do título "Jogos" */
+.main-heading {
+    color: #000; /* Cor do texto no tema claro */
+}
+
+/* Estilos específicos para o modo escuro */
+.tema-escuro .main-heading {
+    color: #fff; /* Cor do texto no tema escuro */
+}
+
+/* botões pra voltar de pagina */
+.botoes-gerais {
+    text-align: center; /* Centraliza os botões horizontalmente */
+    margin-top: 20px; /* Adiciona uma margem superior */
+}
+
+.botoes-gerais a {
+    display: inline-block; /* Exibe os botões em linha */
+    padding: 10px 20px; /* Adiciona preenchimento interno */
+    margin: 0 10px; /* Adiciona margem entre os botões */
+    font-size: 18px; /* Define o tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    text-decoration: none; /* Remove a decoração do link */
+    color: #fff; /* Cor do texto */
+    background-color: #007bff; /* Cor de fundo dos botões */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: transform 0.3s ease; /* Efeito de transição */
+}
+
+.botoes-gerais a:hover {
+    transform: scale(1.1); /* Efeito de "inflar" quando o mouse passa por cima */
+}
+
+/* Estilo específico para o botão da Biblioteca */
+.botao-biblioteca {
+    background-color: #080808; /* Cor específica do botão da Biblioteca */
+}
+
+/* Estilo para o contêiner dos botões de contato */
+.botoes-contato {
+    text-align: center; /* Centraliza os botões horizontalmente */
+    margin-top: 50px; /* Adiciona uma margem superior */
+}
+
+.botao-contato {
+    display: inline-block; /* Exibe os botões em linha */
+    padding: 20px 40px; /* Adiciona preenchimento interno maior */
+    margin: 0 20px 20px 20px; /* Adiciona margem inferior para separar os botões */
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    text-decoration: none; /* Remove a decoração do link */
+    color: #fff; /* Cor do texto */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: transform 0.3s ease; /* Efeito de transição */
+}
+
+.botao-contato:hover {
+    transform: scale(1.1); /* Efeito de "inflar" quando o mouse passa por cima */
+}
+
+/* Estilo específico para o botão do Instagram */
+.instagram {
+    background-color: #bc2a8d; /* Cor específica do Instagram */
+}
+
+/* Estilo específico para o botão do GitHub */
+.github {
+    background-color: #333; /* Cor específica do GitHub */
+}
+
+.voltar-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #141414; /* Cor de fundo do botão "Voltar" */
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.voltar-button:hover {
+    transform: scale(1.1);
+}
